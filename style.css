@@ -1,0 +1,258 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,iframe,a,img{
+	margin:0;
+	padding:0;
+	border:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img {
+	border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul,li {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,q:after {
+	content:'';
+}
+abbr,acronym { border:0;
+}
+
+a {
+    color: black;
+    font-style: normal;
+    cursor: default;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+  font-family: helvetica, sans-serif;
+  font-size: 13px;
+  color: #202028;
+  overflow-y: scroll;
+
+  background-color: white;
+}
+
+p {
+  line-height: 1.8em;
+  padding-bottom: 12px;
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  color: #202070;
+  border-bottom: 1px solid #6060A0;
+  cursor: pointer;
+}
+
+a:hover {}
+
+h1 {
+  font-size: 2.2em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+h4 {
+  font-size: 1.0em;
+}
+
+/* This is used in places it really shouldn't be, hence it is in general. */
+.tag {
+  font-weight: bold;
+}
+
+code {
+  background-color: #f0f0f0;
+  border: 1px solid #e0e0e0;
+  padding: 2px;
+}
+code:hover {
+    background-color: #f6f6f6;
+}
+
+/**********************************************************************
+ * High-level structure.
+ *********************************************************************/
+.main .main-shadow {
+    width: 100%;
+    background: url('http://zachsnow.com/static/images/drop-shadow-light.png') top left repeat-x;
+    height: 4px;
+    z-index: 10000;
+}
+.main .main-inner {
+    overflow-y: hidden;
+}
+
+.main .main-content {
+    padding-top: 15px;
+}
+
+
+.content {
+  width: 760px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+}
+
+/**********************************************************************
+ * Header.
+ *********************************************************************/
+.header {
+  background-image: url("http://zachsnow.com/static/images/header.png");
+  background-repeat: repeat;
+  position: relative;
+  overflow: hidden;
+}
+.header .header-mark {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: none;
+  display: block;
+  float: left;
+}
+.header .header-mark .header-title {
+  font-size: 36px;
+  color: #eeeeee;
+}
+.header .header-mark .header-byline {
+  font-size: 14px;
+  color: #bbbbc4;
+}
+.header .header-contact {
+  color: #eeeef4;
+  padding-top: 9px;
+  padding-bottom: 2px;
+}
+.header .header-contact a {
+  color: inherit;
+  border-bottom: 1px solid #ddddf4;
+}
+.header .header-contact a:hover {
+  border-bottom: 1px solid #ddddf4;
+}
+.header .header-contact-info {
+  float: right;
+  text-align: right;
+  font-size: 13px;
+  height: 70px;
+  width: 510px;
+}
+.header .github-info {
+  overflow: hidden;
+  height: 33px;
+}
+
+/**********************************************************************
+ * Navigation.
+ *********************************************************************/
+.navigation {
+  background-color: #f0f0f8;
+  overflow: hidden;
+  text-transform: lowercase;
+  font-size: 15px;
+}
+.navigation .navigation-shadow {
+  width: 100%;
+  background: url("http://zachsnow.com/static/images/drop-shadow.png") top left repeat-x;
+  height: 4px;
+}
+.navigation .navigation-inner {
+  position: relative;
+}
+.navigation .navigation-indicator-track {
+  z-index: 10;
+  position: relative;
+}
+.navigation .navigation-indicator-track .navigation-indicator {
+  position: absolute;
+  display: none;
+  width: 50px;
+  height: 10px;
+  margin-top: -2px;
+  background: url("http://zachsnow.com/static/images/navigation/dark-arrow.png") top left no-repeat;
+}
+.navigation .navigation-item {
+  display: block;
+  border: none;
+  float: left;
+  color: #404050;
+  text-align: center;
+  width: 100px;
+  padding-left: 5px;
+  padding-right: 5px;
+  /* Buttons. */
+  /* Icons. */
+  /* Links. */
+}
+.navigation .navigation-item.first {
+  padding-left: 0px;
+}
+.navigation .navigation-item.last {
+  padding-right: 0px;
+}
+.navigation .navigation-item .navigation-title {
+  visibility: hidden;
+  display: block;
+  margin-top: -5px;
+  padding-bottom: 2px;
+}
+.navigation .navigation-item:hover {
+  background-color: rgba(120, 120, 124, 0.2);
+}
+.navigation .navigation-item:hover .navigation-title {
+  visibility: visible;
+}
+.navigation .navigation-item img {
+  display: block;
+  width: 50%;
+  height: auto;
+  margin: 2px auto 0 auto;
+  opacity: 0.5;
+}
+.navigation .navigation-item.navigation-button {
+  cursor: pointer;
+}
+.navigation .navigation-item.navigation-button.showing {
+  background-color: rgba(120, 120, 124, 0.2);
+  /* Currently selected ('showing') buttons always show their title. */
+}
+.navigation .navigation-item.navigation-button.showing .navigation-title {
+  visibility: visible;
+}
+.navigation .navigation-item.navigation-icon {
+  background-color: #e0e0e8;
+}
+.navigation .navigation-item.navigation-icon .navigation-title {
+  visibility: visible;
+}
+.navigation .navigation-item .navigation-link {
+  cursor: pointer;
+}
